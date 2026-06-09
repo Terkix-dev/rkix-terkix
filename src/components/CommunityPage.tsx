@@ -66,30 +66,30 @@ export default function CommunityPage() {
     <div className="flex flex-col h-full overflow-hidden bg-[#080808]">
 
       {/* Page header */}
-      <div className="border-b border-[#1e1e1e] bg-[#080808] px-8 py-6 shrink-0">
-        <div className="flex items-start justify-between gap-4 mb-6">
-          <div>
-            <h1 className="text-2xl font-semibold text-white tracking-tight">Community</h1>
-            <p className="text-sm text-[#555555] mt-1">Khám phá · Chia sẻ · Cộng tác cùng developers</p>
+      <div className="border-b border-[#1e1e1e] bg-[#080808] px-4 sm:px-8 py-4 sm:py-6 shrink-0">
+        <div className="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
+          <div className="flex-1 min-w-0">
+            <h1 className="text-xl sm:text-2xl font-semibold text-white tracking-tight">Community</h1>
+            <p className="text-xs sm:text-sm text-[#555555] mt-1">Khám phá · Chia sẻ · Cộng tác cùng developers</p>
           </div>
-          <div className="relative">
+          <div className="relative shrink-0 w-full sm:w-auto">
             <Search size={13} className="absolute left-3 top-1/2 -translate-y-1/2 text-[#444444]" />
             <input
               value={searchQ}
               onChange={e => setSearchQ(e.target.value)}
               placeholder="Tìm repo, dự án…"
-              className="bg-[#0f0f0f] border border-[#1e1e1e] text-sm font-mono text-white placeholder-[#333333] pl-9 pr-4 py-2 focus:outline-none focus:border-[#2a2a2a] w-52 transition-colors"
+              className="w-full sm:w-48 bg-[#0f0f0f] border border-[#1e1e1e] text-sm font-mono text-white placeholder-[#333333] pl-9 pr-4 py-2 focus:outline-none focus:border-[#2a2a2a] transition-colors"
             />
           </div>
         </div>
 
         {/* Tabs */}
-        <div className="flex gap-0 border-b border-[#1e1e1e] -mb-px">
+        <div className="flex gap-0 border-b border-[#1e1e1e] -mb-px overflow-x-auto">
           {TABS.map(({ id, label, Icon }) => (
             <button
               key={id}
               onClick={() => setActiveTab(id)}
-              className={`flex items-center gap-2 px-5 py-2.5 text-xs font-medium transition border-b-2 cursor-pointer ${
+              className={`flex items-center gap-2 px-4 sm:px-5 py-2.5 text-xs font-medium transition border-b-2 cursor-pointer whitespace-nowrap shrink-0 ${
                 activeTab === id
                   ? "text-white border-b-[#4B7FFF]"
                   : "text-[#555555] border-b-transparent hover:text-[#888888]"
@@ -107,7 +107,7 @@ export default function CommunityPage() {
         <div className="flex flex-col lg:flex-row min-h-full">
 
           {/* Main content */}
-          <div className="flex-1 min-w-0 px-8 py-6 space-y-4">
+          <div className="flex-1 min-w-0 px-4 sm:px-8 py-4 sm:py-6 space-y-4">
 
             {/* TRENDING */}
             {activeTab === "trending" && (
@@ -195,9 +195,9 @@ export default function CommunityPage() {
                             {post.time}
                           </div>
                         </div>
-                        <div className="ml-auto flex items-center gap-1.5">
-                          {post.tags.map(tag => (
-                            <span key={tag} className="text-[10px] px-2 py-0.5 font-mono border border-[#1e1e1e] text-[#444444]">{tag}</span>
+                        <div className="ml-auto flex items-center gap-1 flex-wrap justify-end">
+                          {post.tags.slice(0, 2).map(tag => (
+                            <span key={tag} className="text-[10px] px-1.5 py-0.5 font-mono border border-[#1e1e1e] text-[#444444] hidden sm:inline">{tag}</span>
                           ))}
                         </div>
                       </div>
@@ -270,7 +270,7 @@ export default function CommunityPage() {
           </div>
 
           {/* Right sidebar */}
-          <div className="w-full lg:w-60 shrink-0 border-t lg:border-t-0 lg:border-l border-[#1e1e1e] py-6 px-5 space-y-6">
+          <div className="w-full lg:w-56 shrink-0 border-t lg:border-t-0 lg:border-l border-[#1e1e1e] py-4 sm:py-6 px-4 sm:px-5 space-y-5">
 
             {/* Leaderboard */}
             <div>

@@ -84,19 +84,19 @@ export default function DashboardOverview({ project, agents, setCurrentSection, 
       </div>
 
       {/* ── System metrics strip ── */}
-      <div className="flex items-center gap-8 py-5 border-y border-[#1e1e1e]">
+      <div className="flex items-center gap-5 sm:gap-8 py-4 sm:py-5 border-y border-[#1e1e1e] overflow-x-auto">
         {[
-          { label: "CPU", value: `${cpuUsage}%`, bar: cpuUsage, max: 100 },
-          { label: "RAM", value: `${memUsed} GB`, bar: (memUsed / 8) * 100, max: 100 },
-          { label: "Uptime", value: fmtUptime, bar: null, max: null },
+          { label: "CPU",    value: `${cpuUsage}%`,    bar: cpuUsage,              max: 100 },
+          { label: "RAM",    value: `${memUsed} GB`,   bar: (memUsed / 8) * 100,  max: 100 },
+          { label: "Uptime", value: fmtUptime,          bar: null,                 max: null },
         ].map(m => (
-          <div key={m.label} className="flex items-center gap-4 min-w-0">
+          <div key={m.label} className="flex items-center gap-3 sm:gap-4 min-w-0 shrink-0">
             <div>
-              <div className="text-[11px] font-mono text-[#555555] uppercase tracking-widest mb-1">{m.label}</div>
-              <div className="text-base font-mono font-semibold text-[#eeeeee]">{m.value}</div>
+              <div className="text-[10px] sm:text-[11px] font-mono text-[#555555] uppercase tracking-widest mb-1">{m.label}</div>
+              <div className="text-sm sm:text-base font-mono font-semibold text-[#eeeeee]">{m.value}</div>
             </div>
             {m.bar !== null && (
-              <div className="w-16 h-[2px] bg-[#1e1e1e]">
+              <div className="w-12 sm:w-16 h-[2px] bg-[#1e1e1e] shrink-0">
                 <div
                   className="h-full bg-[#4B7FFF] transition-all duration-700"
                   style={{ width: `${Math.min(m.bar, 100)}%` }}
@@ -112,13 +112,13 @@ export default function DashboardOverview({ project, agents, setCurrentSection, 
         {metrics.map(m => {
           const Icon = m.icon;
           return (
-            <div key={m.label} className="bg-[#080808] p-6 hover:bg-[#0f0f0f] transition-colors cursor-default">
-              <div className="flex items-center justify-between mb-4">
-                <span className="text-xs font-medium text-[#555555] uppercase tracking-widest">{m.label}</span>
-                <Icon size={13} className="text-[#333333]" />
+            <div key={m.label} className="bg-[#080808] p-4 sm:p-6 hover:bg-[#0f0f0f] transition-colors cursor-default">
+              <div className="flex items-center justify-between mb-3 sm:mb-4">
+                <span className="text-[10px] sm:text-xs font-medium text-[#555555] uppercase tracking-widest">{m.label}</span>
+                <Icon size={12} className="text-[#333333]" />
               </div>
-              <div className="text-3xl font-semibold text-[#eeeeee] tabular-nums">{m.value}</div>
-              <div className="text-xs text-[#555555] mt-1 font-mono">{m.sub}</div>
+              <div className="text-2xl sm:text-3xl font-semibold text-[#eeeeee] tabular-nums">{m.value}</div>
+              <div className="text-[10px] sm:text-xs text-[#555555] mt-1 font-mono">{m.sub}</div>
             </div>
           );
         })}
