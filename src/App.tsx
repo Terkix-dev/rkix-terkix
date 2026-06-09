@@ -1061,15 +1061,15 @@ export default function App() {
   <title>Modern Bento Landing Page</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-[#02050c] text-[#E6EDF3] font-sans p-6">
+<body class="bg-[#080808] text-[#eeeeee] font-sans p-6">
   <div class="max-w-5xl mx-auto">
     <!-- Navbar -->
-    <header class="flex justify-between items-center py-4 border-b border-[#102142] mb-12">
+    <header class="flex justify-between items-center py-4 border-b border-[#1e1e1e] mb-12">
       <div class="flex items-center gap-2">
         <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-black text-sm">S</div>
         <span class="text-lg font-bold tracking-tight text-white">SaaS Flow</span>
       </div>
-      <span class="text-xs text-[#8B949E]">Status: Active</span>
+      <span class="text-xs text-[#888888]">Status: Active</span>
     </header>
 
     <!-- Hero -->
@@ -1077,22 +1077,22 @@ export default function App() {
       <h1 class="text-4xl md:text-5xl font-black text-white tracking-tight mb-4">
         Beautiful Bento Feature Grid Grid Layout
       </h1>
-      <p class="text-[#8B949E] max-w-xl mx-auto text-sm md:text-base">
+      <p class="text-[#888888] max-w-xl mx-auto text-sm md:text-base">
         Generated for: "${prompt}" - Designed dynamically with optimized flex layout matrices.
       </p>
     </div>
 
     <!-- Bento Grid -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="md:col-span-2 p-6 rounded-xl bg-[#050915] border border-[#102142] relative overflow-hidden">
+      <div class="md:col-span-2 p-6 rounded-xl bg-[#0f0f0f] border border-[#1e1e1e] relative overflow-hidden">
         <span class="text-xs text-indigo-400 font-mono font-bold">CORE VALUE</span>
         <h3 class="text-xl font-bold text-white mt-1 mb-2">Simulated Multi-Agent Synapse</h3>
-        <p class="text-xs text-[#8B949E]">All 6 agents mapped requirements locally. Files have been injected smoothly.</p>
+        <p class="text-xs text-[#888888]">All 6 agents mapped requirements locally. Files have been injected smoothly.</p>
       </div>
-      <div class="p-6 rounded-xl bg-[#050915] border border-[#102142]">
+      <div class="p-6 rounded-xl bg-[#0f0f0f] border border-[#1e1e1e]">
         <span class="text-xs text-green-400 font-mono font-bold">INTEGRATED WORKSPACE</span>
         <h3 class="text-xl font-bold text-white mt-1 mb-2">Instant Reload</h3>
-        <p class="text-xs text-[#8B949E]">Preview browser reflects local cache parameters in real-time.</p>
+        <p class="text-xs text-[#888888]">Preview browser reflects local cache parameters in real-time.</p>
       </div>
     </div>
   </div>
@@ -1106,12 +1106,12 @@ export default function App() {
   <title>TerKix Software Output</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-[#02050c] text-[#E6EDF3] p-10 font-sans">
-  <div class="max-w-2xl mx-auto border border-[#102142] bg-[#050915] p-8 rounded-xl shadow-2xl">
+<body class="bg-[#080808] text-[#eeeeee] p-10 font-sans">
+  <div class="max-w-2xl mx-auto border border-[#1e1e1e] bg-[#0f0f0f] p-8 rounded-xl shadow-2xl">
     <h1 class="text-2xl font-bold text-white mb-2">Active Sandbox Terminal Live</h1>
-    <p class="text-xs text-[#58A6FF] font-mono mb-6">$ terkix command execute --success</p>
+    <p class="text-xs text-[#7BA3FF] font-mono mb-6">$ terkix command execute --success</p>
     
-    <div class="p-4 bg-black/40 border border-[#102142] rounded-lg mb-6">
+    <div class="p-4 bg-black/40 border border-[#1e1e1e] rounded-lg mb-6">
       <p class="text-xs text-gray-400">Directive:</p>
       <p class="text-sm font-semibold text-white">"${prompt}"</p>
     </div>
@@ -1248,11 +1248,11 @@ export default function App() {
   <title>${name}</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-[#02050c] text-[#E6EDF3] p-10 font-sans">
-  <div class="max-w-2xl mx-auto border border-[#102142] bg-[#050915] p-8 rounded-xl">
+<body class="bg-[#080808] text-[#eeeeee] p-10 font-sans">
+  <div class="max-w-2xl mx-auto border border-[#1e1e1e] bg-[#0f0f0f] p-8 rounded-xl">
     <h1 class="text-3xl font-black text-white mb-2">${name}</h1>
-    <p class="text-xs text-[#58A6FF] font-mono mb-4">Workspace Root: ${id}</p>
-    <p class="text-sm text-[#8B949E]">
+    <p class="text-xs text-[#7BA3FF] font-mono mb-4">Workspace Root: ${id}</p>
+    <p class="text-sm text-[#888888]">
       ${description || "A clean sandbox development environment waiting for directives."}
     </p>
   </div>
@@ -1309,7 +1309,7 @@ export default function App() {
     <div
       id="terkix-root"
       ref={terkixRootRef}
-      className="w-full h-full overflow-hidden flex relative bg-[#02050c] text-[#E6EDF3] font-sans"
+      className="w-full h-full overflow-hidden flex relative bg-[#080808] text-[#eeeeee] font-sans"
     >
       {/* CRT scanline overlay */}
       {crtFilter && (
@@ -1327,31 +1327,31 @@ export default function App() {
       {/* LEFT SIDEBAR — always visible on md+, drawer overlay on mobile */}
       <nav className={`
         fixed md:static inset-y-0 left-0 z-40
-        w-[240px] md:w-[220px]
-        border-r border-[#102142] bg-[#050915]
+        w-[220px] md:w-[200px]
+        border-r border-[#1e1e1e] bg-[#080808]
         flex flex-col shrink-0 select-none
         transition-transform duration-200
         ${sidebarOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"}
       `}>
         {/* Logo header */}
-        <div className="h-12 border-b border-[#102142] flex items-center px-3 gap-3 shrink-0 bg-[#030810]">
-          <div className="w-8 h-8 bg-[#0052cc] flex items-center justify-center text-white font-black text-[12px] font-mono shrink-0 border border-[#0066ff]/30">TK</div>
+        <div className="h-14 border-b border-[#1e1e1e] flex items-center px-5 gap-3 shrink-0">
+          <div className="w-7 h-7 bg-[#4B7FFF] flex items-center justify-center text-white font-bold text-[11px] font-mono shrink-0">TK</div>
           <div className="flex-1 min-w-0">
-            <div className="text-white font-bold text-sm leading-tight truncate tracking-tight">TerKix</div>
-            <div className="text-[#3a6aaa] text-[8px] font-mono tracking-widest uppercase">AI Workspace v1.0.5</div>
+            <div className="text-white font-semibold text-sm leading-tight truncate">TerKix</div>
+            <div className="text-[#444444] text-[10px] font-mono">v1.0.5</div>
           </div>
           <button
             type="button"
             onClick={() => setSidebarOpen(false)}
-            className="md:hidden p-1.5 text-[#3a6aaa] hover:text-white transition cursor-pointer border border-[#102142] hover:border-[#1a3660]"
+            className="md:hidden text-[#444444] hover:text-white transition cursor-pointer"
           >
             <X size={14} />
           </button>
         </div>
 
         {/* Navigation items */}
-        <div className="flex-1 overflow-y-auto py-1.5 px-1.5 space-y-px">
-          {navItems.map(({ section, Icon, label, color }) => {
+        <div className="flex-1 overflow-y-auto py-3 px-3 space-y-0.5">
+          {navItems.map(({ section, Icon, label }) => {
             const isActive = currentSection === section;
             return (
               <button
@@ -1360,16 +1360,16 @@ export default function App() {
                   setCurrentSection(section);
                   setSidebarOpen(false);
                 }}
-                className={`w-full flex items-center gap-3 px-3 py-2 text-left transition-all duration-100 cursor-pointer border-l-2 ${
+                className={`w-full flex items-center gap-3 px-3 py-2.5 text-left transition-colors duration-100 cursor-pointer ${
                   isActive
-                    ? "bg-[#060d20] text-white border-l-[#0052cc] border-y border-y-[#102142] border-r border-r-[#102142]"
-                    : "text-[#5a7aaa] hover:text-[#c9d1d9] hover:bg-[#060d20]/60 border-l-transparent"
+                    ? "bg-[#161616] text-white"
+                    : "text-[#666666] hover:text-[#cccccc] hover:bg-[#0f0f0f]"
                 }`}
               >
-                <Icon size={15} className="shrink-0" style={isActive ? { color } : {}} />
-                <span className="text-[12px] font-medium">{label}</span>
+                <Icon size={14} className="shrink-0" style={isActive ? { color: "#4B7FFF" } : {}} />
+                <span className="text-[13px] font-medium">{label}</span>
                 {isActive && (
-                  <span className="ml-auto w-1.5 h-1.5 shrink-0" style={{ backgroundColor: color }} />
+                  <span className="ml-auto w-1 h-1 bg-[#4B7FFF] shrink-0" />
                 )}
               </button>
             );
@@ -1377,23 +1377,23 @@ export default function App() {
         </div>
 
         {/* Bottom: project status */}
-        <div className="border-t border-[#102142] p-2 space-y-1.5 shrink-0 bg-[#030810]">
-          <div className="px-2 py-1.5 bg-[#02050c] border border-[#102142] flex items-center gap-2 min-w-0">
+        <div className="border-t border-[#1e1e1e] px-4 py-4 shrink-0 space-y-2">
+          <div className="flex items-center gap-2 min-w-0">
             <span className="relative flex h-1.5 w-1.5 shrink-0">
-              <span className="animate-ping absolute inline-flex h-full w-full bg-[#3FB950] opacity-60"></span>
-              <span className="relative inline-flex h-1.5 w-1.5 bg-[#3FB950]"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full bg-[#4B7FFF] opacity-50"></span>
+              <span className="relative inline-flex h-1.5 w-1.5 bg-[#4B7FFF]"></span>
             </span>
-            <span className="text-[11px] font-mono text-white truncate font-semibold">{activeProject.id}</span>
-            <span className="text-[8px] bg-[#3FB950]/10 text-[#3FB950] px-1.5 py-0.5 border border-[#3FB950]/20 font-bold font-mono ml-auto shrink-0">{activeProject.activeBranch}</span>
+            <span className="text-xs font-mono text-[#cccccc] truncate">{activeProject.id}</span>
+            <span className="text-[10px] text-[#444444] font-mono ml-auto shrink-0">{activeProject.activeBranch}</span>
           </div>
-          <div className="flex items-center justify-between px-1">
-            <span className="text-[10px] text-[#3a6aaa] font-mono">
+          <div className="flex items-center justify-between">
+            <span className="text-[11px] text-[#444444] font-mono">
               {computedAgents.filter(a => a.status === "running").length > 0
-                ? `${computedAgents.filter(a => a.status === "running").length} agent(s) active`
-                : "All agents standby"}
+                ? `${computedAgents.filter(a => a.status === "running").length} running`
+                : "All standby"}
             </span>
             {isMicActive && (
-              <span className="flex items-center gap-1 text-[9px] text-red-400 font-mono">
+              <span className="flex items-center gap-1 text-[10px] text-red-400 font-mono">
                 <span className="w-1.5 h-1.5 bg-red-500 animate-pulse" />
                 REC
               </span>
@@ -1406,75 +1406,57 @@ export default function App() {
       <div className="flex-1 flex flex-col min-w-0 overflow-hidden w-full">
 
         {/* TOP HEADER */}
-        <header className="h-10 border-b border-[#102142] bg-[#030810] flex items-center justify-between px-3 shrink-0 select-none gap-2">
+        <header className="h-11 border-b border-[#1e1e1e] bg-[#080808] flex items-center justify-between px-5 shrink-0 select-none gap-2">
           {/* Left */}
-          <div className="flex items-center gap-2 min-w-0">
+          <div className="flex items-center gap-3 min-w-0">
             <button
               type="button"
               onClick={() => setSidebarOpen(true)}
-              className="md:hidden p-1.5 border border-[#102142] bg-[#050915] text-[#5a7aaa] hover:text-white transition cursor-pointer shrink-0"
+              className="md:hidden text-[#555555] hover:text-white transition cursor-pointer shrink-0"
             >
-              <Menu size={14} />
+              <Menu size={15} />
             </button>
-            <div className="md:hidden w-6 h-6 bg-[#0052cc] flex items-center justify-center text-white font-black text-[9px] font-mono shrink-0">TK</div>
-            <div className="flex items-center gap-1.5 text-[11px] font-mono min-w-0">
-              <span className="text-[#3a6aaa] hidden sm:inline">tty1</span>
-              <span className="text-[#102142] hidden sm:inline">/</span>
-              <span className="text-[#c9d1d9] font-semibold capitalize truncate">{currentSection}</span>
+            <div className="md:hidden w-6 h-6 bg-[#4B7FFF] flex items-center justify-center text-white font-bold text-[10px] font-mono shrink-0">TK</div>
+            <div className="flex items-center gap-2 text-xs font-mono min-w-0">
+              <span className="text-[#444444] hidden sm:inline">tty1</span>
+              <span className="text-[#2a2a2a] hidden sm:inline">/</span>
+              <span className="text-[#cccccc] font-medium capitalize truncate">{currentSection}</span>
               {isProcessing && (
                 <span className="flex items-center gap-0.5 ml-1 shrink-0">
-                  <span className="w-1 h-1 bg-[#0052cc] animate-bounce [animation-delay:-0.3s]"></span>
-                  <span className="w-1 h-1 bg-[#0052cc] animate-bounce [animation-delay:-0.15s]"></span>
-                  <span className="w-1 h-1 bg-[#0052cc] animate-bounce"></span>
+                  <span className="w-1 h-1 bg-[#4B7FFF] animate-bounce [animation-delay:-0.3s]"></span>
+                  <span className="w-1 h-1 bg-[#4B7FFF] animate-bounce [animation-delay:-0.15s]"></span>
+                  <span className="w-1 h-1 bg-[#4B7FFF] animate-bounce"></span>
                 </span>
               )}
             </div>
           </div>
 
           {/* Right */}
-          <div className="flex items-center gap-1.5 shrink-0">
-            <span className="hidden sm:inline px-2 py-0.5 text-[9px] font-mono bg-[#3FB950]/10 text-[#3FB950] border border-[#3FB950]/20 font-bold uppercase">
+          <div className="flex items-center gap-3 shrink-0">
+            <span className="hidden sm:inline text-[11px] font-mono text-[#4B7FFF] font-medium">
               {activeProject.status === "active" ? "LIVE" : activeProject.status}
             </span>
             <button
               type="button"
               onClick={toggleMicrophone}
-              className={`p-1.5 border transition cursor-pointer ${
-                isMicActive
-                  ? "bg-red-950/40 border-red-600/50 text-red-400"
-                  : "bg-[#050915] border-[#102142] text-[#5a7aaa] hover:text-white"
+              className={`transition cursor-pointer ${
+                isMicActive ? "text-red-400" : "text-[#555555] hover:text-white"
               }`}
               title="Toggle microphone"
             >
-              {isMicActive ? <MicOff size={11} /> : <Mic size={11} />}
+              {isMicActive ? <MicOff size={13} /> : <Mic size={13} />}
             </button>
             <button
               type="button"
               onClick={() => setCrtFilter(p => !p)}
-              className={`hidden sm:flex p-1.5 border transition cursor-pointer ${
-                crtFilter
-                  ? "bg-[#0052cc]/20 border-[#0052cc]/50 text-[#00d2ff]"
-                  : "bg-[#050915] border-[#102142] text-[#5a7aaa] hover:text-white"
+              className={`hidden sm:flex transition cursor-pointer ${
+                crtFilter ? "text-[#7BA3FF]" : "text-[#555555] hover:text-white"
               }`}
               title="Toggle CRT scanline"
             >
-              <Cpu size={11} />
+              <Cpu size={13} />
             </button>
-            <button
-              type="button"
-              onClick={() => {
-                const themes: Array<"green" | "amber" | "cyan" | "violet"> = ["green", "amber", "cyan", "violet"];
-                setThemeColor(themes[(themes.indexOf(themeColor) + 1) % themes.length]);
-              }}
-              className="p-1.5 border border-[#102142] bg-[#050915] hover:border-[#1a3660] transition cursor-pointer"
-              title="Cycle terminal theme"
-            >
-              <div
-                className="w-2.5 h-2.5"
-                style={{ backgroundColor: themeColor === "green" ? "#3FB950" : themeColor === "amber" ? "#D29922" : themeColor === "cyan" ? "#00E5FF" : "#BC8CFF" }}
-              />
-            </button>
-            <span className="text-[10px] font-mono text-[#3a6aaa] pl-1 hidden md:inline tabular-nums">
+            <span className="text-xs font-mono text-[#444444] hidden md:inline tabular-nums">
               {new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
             </span>
           </div>
@@ -1485,61 +1467,56 @@ export default function App() {
 
           {/* TERMINAL — always rendered, hidden when not active */}
           <div className={`flex-1 flex flex-col min-h-0 ${currentSection === "terminal" ? "flex" : "hidden"}`}>
-            <div className="flex-1 bg-[#02040d] flex flex-col overflow-hidden">
+            <div className="flex-1 bg-[#080808] flex flex-col overflow-hidden">
 
-              {/* ── Terminal toolbar (Replit-style) ── */}
-              <div className="flex items-center gap-0 border-b border-[#102142] bg-[#030810] shrink-0 h-9">
-                {/* Left: Console label */}
-                <div className="flex items-center gap-2 px-3 border-r border-[#102142] h-full">
-                  <span className="w-2 h-2 bg-[#3FB950]" style={{ animation: isProcessing ? "pulse 1s infinite" : "none" }} />
-                  <span className="text-[10px] font-mono font-bold text-[#c9d1d9] uppercase tracking-widest">Console</span>
-                  <span className="text-[9px] font-mono text-[#3a6aaa] bg-[#060d20] border border-[#102142] px-1.5 py-0.5">
-                    {terminalLines.length}
-                  </span>
+              {/* ── Terminal toolbar ── */}
+              <div className="flex items-center border-b border-[#1e1e1e] bg-[#080808] shrink-0 h-10 px-5">
+                <div className="flex items-center gap-3">
+                  <span className={`w-1.5 h-1.5 ${isProcessing ? "bg-[#4B7FFF] animate-pulse" : "bg-[#333333]"}`} />
+                  <span className="text-xs font-mono font-medium text-[#888888]">console</span>
+                  <span className="text-xs font-mono text-[#444444]">{terminalLines.length}</span>
                 </div>
 
                 <div className="flex-1" />
 
-                {/* Right: actions */}
-                {/* Font size */}
-                <div className="flex items-center border-l border-[#102142] h-full">
-                  {(["sm","base","lg"] as const).map(sz => (
-                    <button
-                      key={sz}
-                      onClick={() => setConsoleFontSize(sz)}
-                      className={`px-2.5 h-full text-[9px] font-mono font-bold transition cursor-pointer ${
-                        consoleFontSize === sz
-                          ? "bg-[#060d20] text-white border-b-2 border-b-[#0052cc]"
-                          : "text-[#3a6aaa] hover:text-white hover:bg-[#060d20]"
-                      }`}
-                    >
-                      {sz === "sm" ? "S" : sz === "base" ? "M" : "L"}
-                    </button>
-                  ))}
+                <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-1">
+                    {(["sm","base","lg"] as const).map(sz => (
+                      <button
+                        key={sz}
+                        onClick={() => setConsoleFontSize(sz)}
+                        className={`px-2 py-1 text-[10px] font-mono transition cursor-pointer ${
+                          consoleFontSize === sz
+                            ? "text-white"
+                            : "text-[#444444] hover:text-[#888888]"
+                        }`}
+                      >
+                        {sz === "sm" ? "S" : sz === "base" ? "M" : "L"}
+                      </button>
+                    ))}
+                  </div>
+
+                  <button
+                    onClick={() => {
+                      const text = terminalLines.map(l => l.text).join("\n");
+                      navigator.clipboard?.writeText(text).catch(() => {});
+                    }}
+                    className="text-[#444444] hover:text-[#888888] transition cursor-pointer flex items-center gap-1.5 text-[10px] font-mono"
+                    title="Copy all"
+                  >
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                    <span className="hidden sm:inline">Copy</span>
+                  </button>
+
+                  <button
+                    onClick={() => setTerminalLines([])}
+                    className="text-[#444444] hover:text-[#888888] transition cursor-pointer flex items-center gap-1.5 text-[10px] font-mono"
+                    title="Clear"
+                  >
+                    <Trash2 size={11} />
+                    <span className="hidden sm:inline">Clear</span>
+                  </button>
                 </div>
-
-                {/* Copy all */}
-                <button
-                  onClick={() => {
-                    const text = terminalLines.map(l => l.text).join("\n");
-                    navigator.clipboard?.writeText(text).catch(() => {});
-                  }}
-                  className="h-full px-3 border-l border-[#102142] text-[#3a6aaa] hover:text-white hover:bg-[#060d20] transition cursor-pointer flex items-center gap-1.5 text-[9px] font-mono uppercase"
-                  title="Copy all output"
-                >
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
-                  <span className="hidden sm:inline">Copy</span>
-                </button>
-
-                {/* Clear */}
-                <button
-                  onClick={() => setTerminalLines([])}
-                  className="h-full px-3 border-l border-[#102142] text-[#3a6aaa] hover:text-[#f85149] hover:bg-[#120505] transition cursor-pointer flex items-center gap-1.5 text-[9px] font-mono uppercase"
-                  title="Clear console"
-                >
-                  <Trash2 size={10} />
-                  <span className="hidden sm:inline">Clear</span>
-                </button>
               </div>
 
               {/* Terminal output viewport */}
@@ -1553,120 +1530,116 @@ export default function App() {
                     terminalScrollRef.current = true;
                   }
                 }}
-                className={`flex-1 p-5 font-mono overflow-y-auto space-y-3 select-text ${
-                  consoleFontSize === "sm" ? "text-[10.5px]" : consoleFontSize === "lg" ? "text-[14.5px]" : "text-[12.5px]"
+                className={`flex-1 px-6 py-5 font-mono overflow-y-auto space-y-2.5 select-text ${
+                  consoleFontSize === "sm" ? "text-xs" : consoleFontSize === "lg" ? "text-sm" : "text-[13px]"
                 }`}
               >
                 {/* Thinking mode trace */}
                 {detailedReasoningText && (
-                  <div className="mb-4 p-4 rounded-xl bg-gradient-to-r from-violet-950/45 to-indigo-950/45 border border-violet-500/30 text-indigo-200 text-[11px] leading-relaxed animate-fade-in font-sans">
-                    <div className="flex items-center justify-between border-b border-violet-500/20 pb-2 mb-2">
-                      <span className="flex items-center gap-1.5 uppercase tracking-wide font-mono text-[10px] text-violet-300 font-bold">
-                        <Cpu size={11} className="text-violet-400 animate-pulse" />
-                        Thinking Mode Trace
+                  <div className="mb-5 p-5 bg-[#0f0f0f] border border-[#1e1e1e] text-[#888888] text-xs leading-relaxed animate-fade-in font-sans">
+                    <div className="flex items-center justify-between border-b border-[#1e1e1e] pb-3 mb-3">
+                      <span className="flex items-center gap-2 font-mono text-[11px] text-[#7BA3FF] font-medium">
+                        <Cpu size={11} className="animate-pulse" />
+                        Thinking Mode
                       </span>
                       <button
                         type="button"
                         onClick={() => setDetailedReasoningText("")}
-                        className="text-[9px] hover:text-white bg-violet-900/40 border border-violet-500/20 px-1.5 py-0.5 rounded cursor-pointer transition"
+                        className="text-[10px] text-[#555555] hover:text-white transition cursor-pointer"
                       >
                         Dismiss
                       </button>
                     </div>
-                    <p className="whitespace-pre-line text-slate-300 font-mono text-[11px]">{detailedReasoningText}</p>
+                    <p className="whitespace-pre-line text-[#888888] font-mono text-xs">{detailedReasoningText}</p>
                   </div>
                 )}
 
                 {/* Terminal lines */}
                 {terminalLines.map((line) => {
                   if (line.type === "input") {
-                    const promptColor =
-                      themeColor === "amber" ? "#D29922" :
-                      themeColor === "cyan"  ? "#00E5FF" :
-                      themeColor === "violet"? "#BC8CFF" : "#3FB950";
                     return (
-                      <div key={line.id} className="flex gap-2 items-start animate-fade-in py-0.5">
-                        <span className="text-[11px] font-mono font-bold shrink-0 select-none" style={{ color: promptColor }}>~$</span>
-                        <span className="text-white font-mono text-[11px] break-all whitespace-pre-wrap leading-relaxed">{line.text}</span>
+                      <div key={line.id} className="flex gap-3 items-start animate-fade-in py-0.5">
+                        <span className="font-mono font-semibold shrink-0 select-none text-[#4B7FFF]">~$</span>
+                        <span className="text-[#eeeeee] font-mono break-all whitespace-pre-wrap leading-relaxed">{line.text}</span>
                       </div>
                     );
                   }
                   if (line.type === "agent-info") return (
-                    <div key={line.id} className="border-l-2 border-[#3b6fb6] bg-[#0a1220] px-3 py-2 animate-fade-in">
+                    <div key={line.id} className="border-l border-[#4B7FFF]/40 pl-4 py-1.5 animate-fade-in">
                       <div className="flex items-center gap-2 mb-1">
-                        <span className="text-[#5b9bd5] font-mono font-bold text-[9px] tracking-widest uppercase">{line.agent}</span>
-                        <span className="text-[#2a4a6a] text-[8px] font-mono">·</span>
-                        <span className="text-[#2a4a6a] font-mono text-[9px] uppercase">LOG</span>
+                        <span className="text-[#7BA3FF] font-mono font-medium text-[10px] uppercase tracking-wide">{line.agent}</span>
+                        <span className="text-[#333333] text-[10px] font-mono">·</span>
+                        <span className="text-[#333333] font-mono text-[10px]">log</span>
                       </div>
-                      <div className="text-[#c9d1d9] text-[11px] font-mono leading-[1.7] whitespace-pre-line">{line.text}</div>
+                      <div className="text-[#888888] font-mono leading-relaxed whitespace-pre-line">{line.text}</div>
                     </div>
                   );
                   if (line.type === "agent-success") return (
-                    <div key={line.id} className="border-l-2 border-[#238636] bg-[#0a1510] px-3 py-2 animate-fade-in">
+                    <div key={line.id} className="border-l border-[#4B7FFF]/60 pl-4 py-1.5 animate-fade-in">
                       <div className="flex items-center gap-2 mb-1">
-                        <span className="text-[#3FB950] font-mono font-bold text-[9px] tracking-widest uppercase">{line.agent || "AGENT"}</span>
-                        <span className="text-[#1a3a20] text-[8px] font-mono">·</span>
-                        <span className="text-[#1a3a20] font-mono text-[9px] uppercase">SUCCESS</span>
+                        <span className="text-[#7BA3FF] font-mono font-medium text-[10px] uppercase tracking-wide">{line.agent || "AGENT"}</span>
+                        <span className="text-[#333333] text-[10px] font-mono">·</span>
+                        <span className="text-[#4B7FFF] font-mono text-[10px]">success</span>
                       </div>
-                      <div className="text-[#c9d1d9] text-[11px] font-mono leading-[1.7] whitespace-pre-line">{line.text}</div>
+                      <div className="text-[#cccccc] font-mono leading-relaxed whitespace-pre-line">{line.text}</div>
                     </div>
                   );
                   if (line.type === "success") return (
-                    <div key={line.id} className="border-l-2 border-[#238636] px-3 py-1.5 animate-fade-in">
-                      <div className="text-[#c9d1d9] text-[11px] font-mono leading-[1.7] whitespace-pre-line">{line.text}</div>
+                    <div key={line.id} className="border-l border-[#4B7FFF]/40 pl-4 py-1 animate-fade-in">
+                      <div className="text-[#cccccc] font-mono leading-relaxed whitespace-pre-line">{line.text}</div>
                     </div>
                   );
                   if (line.type === "warning") return (
-                    <div key={line.id} className="border-l-2 border-[#9e6a03] bg-[#150f00] px-3 py-2 flex gap-2.5 animate-fade-in">
-                      <AlertTriangle size={12} className="text-[#d29922] shrink-0 mt-0.5" />
-                      <span className="text-[#c9d1d9] text-[11px] font-mono leading-[1.7]">{line.text}</span>
+                    <div key={line.id} className="border-l border-yellow-600/40 pl-4 py-1.5 flex gap-2.5 animate-fade-in">
+                      <AlertTriangle size={12} className="text-yellow-600 shrink-0 mt-0.5" />
+                      <span className="text-[#888888] font-mono leading-relaxed">{line.text}</span>
                     </div>
                   );
                   if (line.type === "danger") return (
-                    <div key={line.id} className="border-l-2 border-[#b91c1c] bg-[#120505] px-3 py-2 animate-fade-in">
-                      <div className="text-[#c9d1d9] text-[11px] font-mono leading-[1.7] whitespace-pre-line">{line.text}</div>
+                    <div key={line.id} className="border-l border-red-700/40 pl-4 py-1.5 animate-fade-in">
+                      <div className="text-[#888888] font-mono leading-relaxed whitespace-pre-line">{line.text}</div>
                     </div>
                   );
                   return (
-                    <div key={line.id} className="text-[#8b949e] text-[11px] font-mono leading-[1.7] whitespace-pre-wrap px-0.5">{line.text}</div>
+                    <div key={line.id} className="text-[#555555] font-mono leading-relaxed whitespace-pre-wrap">{line.text}</div>
                   );
                 })}
 
                 {/* AI running indicator */}
                 {isProcessing && (
-                  <div className="flex items-center gap-2 py-1 animate-fade-in">
+                  <div className="flex items-center gap-2.5 py-1 animate-fade-in">
                     <div className="flex gap-1">
-                      <span className="w-1 h-1 bg-[#0052cc] animate-bounce [animation-delay:-0.3s]" />
-                      <span className="w-1 h-1 bg-[#0052cc] animate-bounce [animation-delay:-0.15s]" />
-                      <span className="w-1 h-1 bg-[#0052cc] animate-bounce" />
+                      <span className="w-1 h-1 bg-[#4B7FFF] animate-bounce [animation-delay:-0.3s]" />
+                      <span className="w-1 h-1 bg-[#4B7FFF] animate-bounce [animation-delay:-0.15s]" />
+                      <span className="w-1 h-1 bg-[#4B7FFF] animate-bounce" />
                     </div>
-                    <span className="text-[#5b9bd5] text-[10px] font-mono">agent running…</span>
+                    <span className="text-[#444444] text-xs font-mono">agents running…</span>
                   </div>
                 )}
                 <div ref={terminalEndRef} />
               </div>
 
               {/* ── Keyboard shortcuts bar ── */}
-              <div className="flex items-center gap-2 border-t border-[#07102a] bg-[#020710] px-3 py-1.5 select-none overflow-x-auto shrink-0">
-                <div className="flex gap-1 flex-1">
+              <div className="flex items-center gap-1.5 border-t border-[#1e1e1e] bg-[#080808] px-5 py-2.5 select-none overflow-x-auto shrink-0">
+                <div className="flex gap-1.5 flex-1">
                   {["ESC", "TAB", "CTRL", "ALT", "–", "+", "CLEAR"].map(k => (
                     <button
                       key={k}
                       type="button"
                       onClick={() => handleTermKeyAction(k)}
-                      className="px-2.5 py-1 font-mono text-[9px] font-bold bg-[#030c1e] border border-[#0e1e3a] text-[#3a6aaa] hover:text-white hover:border-[#1a3660] hover:bg-[#071428] cursor-pointer active:scale-95 transition-all duration-100 pointer-events-auto shrink-0"
+                      className="px-2.5 py-1 font-mono text-[10px] bg-[#0f0f0f] border border-[#1e1e1e] text-[#555555] hover:text-[#cccccc] hover:border-[#2a2a2a] cursor-pointer active:scale-95 transition-all duration-100 pointer-events-auto shrink-0"
                     >
                       {k}
                     </button>
                   ))}
                 </div>
-                <div className="flex gap-1 shrink-0">
+                <div className="flex gap-1.5 shrink-0">
                   {["↑", "↓"].map(k => (
                     <button
                       key={k}
                       type="button"
                       onClick={() => handleTermKeyAction(k === "↑" ? "PGUP" : "PGDN")}
-                      className="w-7 h-7 font-mono text-[11px] bg-[#030c1e] border border-[#0e1e3a] text-[#3a6aaa] cursor-pointer hover:text-white hover:border-[#1a3660] active:scale-95 transition flex items-center justify-center pointer-events-auto"
+                      className="w-7 h-7 font-mono text-xs bg-[#0f0f0f] border border-[#1e1e1e] text-[#555555] cursor-pointer hover:text-[#cccccc] hover:border-[#2a2a2a] active:scale-95 transition flex items-center justify-center pointer-events-auto"
                     >
                       {k}
                     </button>
@@ -1674,21 +1647,14 @@ export default function App() {
                 </div>
               </div>
 
-              {/* ── Command Input — Armor Plate ── */}
-              <div className="shrink-0 border-t border-[#102142] bg-[#020710] px-0 py-0">
+              {/* ── Command Input ── */}
+              <div className="shrink-0 border-t border-[#1e1e1e] bg-[#0f0f0f]">
                 <form
                   onSubmit={handleCommandSubmit}
-                  className={`flex items-center gap-0 border-b transition-all duration-150 ${
-                    isProcessing
-                      ? "bg-[#040d20] border-b-[#0052cc]/30"
-                      : "bg-[#030c1e] border-b-transparent focus-within:border-b-[#0052cc]/40"
-                  }`}
+                  className="flex items-center"
                 >
-                  {/* Left accent bar */}
-                  <div className={`w-0.5 self-stretch shrink-0 ${isProcessing ? "bg-[#0052cc]" : "bg-[#3FB950]"}`} />
-
                   {/* Prompt symbol */}
-                  <div className={`shrink-0 px-3 font-mono font-black text-[13px] select-none ${isProcessing ? "text-[#0052cc] animate-pulse" : "text-[#3FB950]"}`}>
+                  <div className={`shrink-0 px-5 font-mono font-semibold text-sm select-none ${isProcessing ? "text-[#4B7FFF] animate-pulse" : "text-[#4B7FFF]"}`}>
                     {isProcessing ? "⟳" : "~$"}
                   </div>
 
@@ -1699,7 +1665,7 @@ export default function App() {
                     onChange={(e) => setCommandText(e.target.value)}
                     disabled={isProcessing}
                     placeholder={isProcessing ? "Agent executing…" : "Command or natural language prompt…"}
-                    className="bg-transparent border-none outline-none flex-1 font-mono text-[12px] text-white placeholder-[#152040] focus:ring-0 select-text min-w-0 py-3"
+                    className="bg-transparent border-none outline-none flex-1 font-mono text-sm text-white placeholder-[#2a2a2a] focus:ring-0 select-text min-w-0 py-4"
                     autoFocus
                   />
 
@@ -1711,13 +1677,13 @@ export default function App() {
                       if (!thinkingMode) setDetailedReasoningText("Thinking Mode activated. Agent stacks will decompose requirements in detail.");
                       else setDetailedReasoningText("");
                     }}
-                    className={`shrink-0 flex items-center gap-1.5 px-3 py-3 border-l text-[9px] font-bold transition-all duration-150 cursor-pointer pointer-events-auto font-mono uppercase ${
+                    className={`shrink-0 flex items-center gap-1.5 px-4 py-4 border-l text-[11px] font-medium transition-all duration-150 cursor-pointer pointer-events-auto font-mono ${
                       thinkingMode
-                        ? "border-l-[#0052cc]/40 bg-[#0052cc]/10 text-[#00d2ff]"
-                        : "border-l-[#0e1e3a] text-[#3a6aaa] hover:text-white hover:bg-[#071428]"
+                        ? "border-l-[#1e1e1e] bg-[#4B7FFF]/10 text-[#7BA3FF]"
+                        : "border-l-[#1e1e1e] text-[#444444] hover:text-[#888888]"
                     }`}
                   >
-                    <Cpu size={9} />
+                    <Cpu size={11} />
                     <span className="hidden sm:inline">{thinkingMode ? "THINK ON" : "THINK"}</span>
                   </button>
 
@@ -1725,31 +1691,31 @@ export default function App() {
                   <button
                     type="submit"
                     disabled={isProcessing}
-                    className={`shrink-0 flex items-center gap-1.5 px-4 py-3 font-bold text-[10px] font-mono uppercase tracking-wide transition-all duration-150 cursor-pointer pointer-events-auto disabled:opacity-40 disabled:cursor-not-allowed border-l ${
+                    className={`shrink-0 flex items-center gap-2 px-5 py-4 font-medium text-sm transition-all duration-150 cursor-pointer pointer-events-auto disabled:opacity-40 disabled:cursor-not-allowed border-l border-l-[#1e1e1e] ${
                       isProcessing
-                        ? "border-l-[#0052cc]/20 bg-[#0052cc]/8 text-[#0052cc]"
-                        : "border-l-[#102142] bg-[#0052cc] hover:bg-[#0066ff] text-white"
+                        ? "text-[#4B7FFF]"
+                        : "bg-[#4B7FFF] hover:bg-[#6B9FFF] text-white"
                     }`}
                   >
                     {isProcessing ? (
                       <>
-                        <span className="w-2 h-2 rounded-full bg-[#58A6FF] animate-bounce [animation-delay:-0.15s]" />
-                        <span className="hidden sm:inline">running</span>
+                        <span className="w-1.5 h-1.5 bg-[#7BA3FF] animate-bounce [animation-delay:-0.15s]" />
+                        <span className="hidden sm:inline font-mono text-xs">running</span>
                       </>
                     ) : (
                       <>
-                        <Send size={10} />
-                        <span>run</span>
+                        <Send size={13} />
+                        <span>Run</span>
                       </>
                     )}
                   </button>
                 </form>
 
                 {/* Command hint */}
-                <div className="flex items-center gap-3 mt-1.5 px-1">
-                  <span className="text-[9px] font-mono text-[#2a3340]">Enter ↵ submit · ESC clear</span>
+                <div className="flex items-center gap-3 px-5 pb-2">
+                  <span className="text-[10px] font-mono text-[#2a2a2a]">Enter ↵ submit · ESC clear</span>
                   {commandText.length > 0 && (
-                    <span className="text-[9px] font-mono text-[#3FB950]/60">{commandText.length} chars</span>
+                    <span className="text-[10px] font-mono text-[#4B7FFF]/50">{commandText.length} chars</span>
                   )}
                 </div>
               </div>
@@ -1780,11 +1746,11 @@ export default function App() {
                 <div className="flex flex-col h-full relative" id="visual-editor-workbench">
 
                   {/* ── Top bar: file name + actions ── */}
-                  <div className="h-10 border-b border-[#102142] bg-[#030810] flex items-center gap-0 shrink-0">
+                  <div className="h-10 border-b border-[#1e1e1e] bg-[#080808] flex items-center gap-0 shrink-0">
                     {/* Mobile: hamburger to toggle file tree */}
                     <button
                       onClick={() => setMobileFileTreeOpen(p => !p)}
-                      className="md:hidden h-full px-3 border-r border-[#102142] text-[#5a7aaa] hover:text-white transition cursor-pointer flex items-center gap-1.5 shrink-0"
+                      className="md:hidden h-full px-3 border-r border-[#1e1e1e] text-[#666666] hover:text-white transition cursor-pointer flex items-center gap-1.5 shrink-0"
                       title="Toggle file list"
                     >
                       <HardDrive size={12} />
@@ -1792,7 +1758,7 @@ export default function App() {
                     </button>
 
                     {/* File name */}
-                    <span className="flex-1 px-3 text-[11px] font-mono text-[#58A6FF] flex items-center gap-1.5 truncate min-w-0">
+                    <span className="flex-1 px-3 text-[11px] font-mono text-[#7BA3FF] flex items-center gap-1.5 truncate min-w-0">
                       <FileCode2 size={11} className="shrink-0" />
                       <span className="truncate">{selectedFilePath ? selectedFilePath.replace("workspace/project/", "") : "— select a file —"}</span>
                     </span>
@@ -1800,14 +1766,14 @@ export default function App() {
                     {/* Actions */}
                     <button
                       onClick={handleCreateFileManually}
-                      className="h-full px-3 border-l border-[#102142] text-[#5a7aaa] hover:text-white transition cursor-pointer flex items-center shrink-0"
+                      className="h-full px-3 border-l border-[#1e1e1e] text-[#666666] hover:text-white transition cursor-pointer flex items-center shrink-0"
                       title="New file"
                     >
                       <Plus size={13} />
                     </button>
                     <button
                       onClick={handleSaveEditedCode}
-                      className="h-full px-4 border-l border-[#102142] bg-[#0052cc] hover:bg-[#0066ff] text-white text-[10px] font-bold font-mono uppercase tracking-wide flex items-center gap-1.5 transition cursor-pointer shrink-0"
+                      className="h-full px-4 border-l border-[#1e1e1e] bg-[#4B7FFF] hover:bg-[#6B9FFF] text-white text-[10px] font-bold font-mono uppercase tracking-wide flex items-center gap-1.5 transition cursor-pointer shrink-0"
                     >
                       <Save size={10} /> Lưu
                     </button>
@@ -1818,7 +1784,7 @@ export default function App() {
 
                     {/* File tree — always visible on md+, drawer on mobile */}
                     <div className={`
-                      flex-col border-r border-[#102142] bg-[#050915] shrink-0
+                      flex-col border-r border-[#1e1e1e] bg-[#0f0f0f] shrink-0
                       ${mobileFileTreeOpen ? "flex absolute inset-y-0 left-0 z-20 w-56" : "hidden"}
                       md:flex md:static md:w-48 md:z-auto
                     `}>
@@ -1830,9 +1796,9 @@ export default function App() {
                           style={{ position: "fixed" }}
                         />
                       )}
-                      <div className="relative z-20 flex flex-col h-full bg-[#050915]">
-                        <div className="px-3 py-2 border-b border-[#102142]">
-                          <span className="text-[9px] font-mono font-bold text-[#3a6aaa] uppercase tracking-widest">TỆP — {activeProject.files.length}</span>
+                      <div className="relative z-20 flex flex-col h-full bg-[#0f0f0f]">
+                        <div className="px-3 py-2 border-b border-[#1e1e1e]">
+                          <span className="text-[9px] font-mono font-bold text-[#555555] uppercase tracking-widest">TỆP — {activeProject.files.length}</span>
                         </div>
                         <div className="flex-1 overflow-y-auto py-1">
                           {activeProject.files.map((file, i) => {
@@ -1843,8 +1809,8 @@ export default function App() {
                                 key={i}
                                 className={`group flex items-center justify-between border-l-2 transition cursor-pointer ${
                                   isSelected
-                                    ? "border-l-[#0052cc] bg-[#060d20] text-[#58A6FF]"
-                                    : "border-l-transparent text-[#5a7aaa] hover:bg-[#060d20]/60 hover:text-[#c9d1d9]"
+                                    ? "border-l-[#4B7FFF] bg-[#141414] text-[#7BA3FF]"
+                                    : "border-l-transparent text-[#666666] hover:bg-[#141414]/60 hover:text-[#cccccc]"
                                 }`}
                               >
                                 <button
@@ -1876,7 +1842,7 @@ export default function App() {
                             );
                           })}
                         </div>
-                        <div className="px-3 py-2 border-t border-[#102142] shrink-0">
+                        <div className="px-3 py-2 border-t border-[#1e1e1e] shrink-0">
                           <div className="border border-yellow-600/20 bg-yellow-600/5 text-[9px] text-[#D29922] px-2 py-1.5 leading-relaxed">
                             <span className="font-bold flex items-center gap-1"><AlertTriangle size={8} /> AI tự sửa tệp</span>
                             Gõ lệnh ở Terminal để tạo code.
@@ -1886,9 +1852,9 @@ export default function App() {
                     </div>
 
                     {/* ── Code editor ── */}
-                    <div className="flex-1 flex min-w-0 bg-[#010309] overflow-hidden">
+                    <div className="flex-1 flex min-w-0 bg-[#080808] overflow-hidden">
                       {/* Line numbers — hidden on mobile */}
-                      <div className="hidden sm:flex flex-col w-10 bg-[#02050c] border-r border-[#102142]/30 text-right text-[10px] font-mono text-[#1e3355] select-none shrink-0 overflow-hidden pt-4 pr-2 leading-[1.6]">
+                      <div className="hidden sm:flex flex-col w-10 bg-[#080808] border-r border-[#1e1e1e]/30 text-right text-[10px] font-mono text-[#1e3355] select-none shrink-0 overflow-hidden pt-4 pr-2 leading-[1.6]">
                         {Array.from({ length: Math.max(editedCode.split("\n").length + 5, 30) }).map((_, i) => (
                           <div key={i}>{i + 1}</div>
                         ))}
@@ -1898,7 +1864,7 @@ export default function App() {
                       <textarea
                         value={editedCode}
                         onChange={(e) => setEditedCode(e.target.value)}
-                        className="flex-1 bg-transparent text-[#c9d1d9] font-mono p-4 leading-[1.6] resize-none focus:outline-none select-text pointer-events-auto"
+                        className="flex-1 bg-transparent text-[#cccccc] font-mono p-4 leading-[1.6] resize-none focus:outline-none select-text pointer-events-auto"
                         style={{
                           fontSize: "12px",
                           whiteSpace: "pre",
@@ -1914,8 +1880,8 @@ export default function App() {
                     </div>
 
                     {/* ── Live Preview — hidden on mobile ── */}
-                    <div className="hidden md:flex w-[38%] border-l border-[#102142] flex-col shrink-0">
-                      <div className="h-8 bg-[#030810] border-b border-[#102142] flex items-center px-3 text-[9px] font-mono text-[#3a6aaa] uppercase tracking-wider shrink-0">
+                    <div className="hidden md:flex w-[38%] border-l border-[#1e1e1e] flex-col shrink-0">
+                      <div className="h-8 bg-[#080808] border-b border-[#1e1e1e] flex items-center px-3 text-[9px] font-mono text-[#555555] uppercase tracking-wider shrink-0">
                         <Globe size={9} className="mr-1.5 text-[#3FB950]" /> Xem trước
                       </div>
                       <div className="flex-1 bg-white relative">
@@ -1927,7 +1893,7 @@ export default function App() {
                             className="w-full h-full border-none"
                           />
                         ) : (
-                          <div className="w-full h-full flex items-center justify-center text-xs text-[#8B949E] bg-[#02050c]">
+                          <div className="w-full h-full flex items-center justify-center text-xs text-[#888888] bg-[#080808]">
                             Không có HTML
                           </div>
                         )}
@@ -1939,53 +1905,41 @@ export default function App() {
 
               {/* AI AGENTS */}
               {currentSection === "agents" && (
-                <div className="p-6 space-y-6">
-                  <div className="flex items-center justify-between">
+                <div className="px-8 py-10 max-w-5xl mx-auto space-y-8">
+                  <div className="flex items-start justify-between">
                     <div>
-                      <h2 className="text-lg font-bold text-white flex items-center gap-2">
-                        <UserCog className="text-[#F0883E]" size={18} />
-                        AI Agent Architectures
-                      </h2>
-                      <p className="text-xs text-[#8B949E] mt-0.5">Configure and monitor autonomous roles in the pipeline.</p>
+                      <h2 className="text-2xl font-semibold text-white tracking-tight">Agents</h2>
+                      <p className="text-sm text-[#888888] mt-1">Autonomous roles in the multi-agent pipeline.</p>
                     </div>
-                    <span className="text-[10px] font-mono bg-[#050915] border border-[#102142] px-2 py-1 rounded text-[#8B949E]">
-                      {computedAgents.length} agents registered
+                    <span className="text-xs font-mono text-[#555555]">
+                      {computedAgents.length} registered
                     </span>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#1e1e1e]">
                     {computedAgents.map((ag) => {
                       const isRunning = ag.status === "running";
                       return (
                         <div
                           key={ag.id}
-                          className={`p-5 rounded-xl border transition-all ${
-                            isRunning
-                              ? "bg-[#050915] border-[#58A6FF] shadow-lg shadow-[#58A6FF]/5"
-                              : "bg-[#050915] border-[#102142] hover:border-[#8B949E]"
-                          }`}
+                          className={`p-6 bg-[#080808] transition-colors ${isRunning ? "bg-[#0f0f0f]" : "hover:bg-[#0a0a0a]"}`}
                         >
-                          <div className="flex justify-between items-start mb-3">
-                            <div className="flex items-center gap-2">
-                              <div className={`w-2.5 h-2.5 rounded-full ${ag.color} ${isRunning ? "animate-ping" : ""}`} />
-                              <h3 className="font-bold text-white text-sm">{ag.name}</h3>
+                          <div className="flex justify-between items-start mb-4">
+                            <div className="flex items-center gap-3">
+                              <span className={`w-1.5 h-1.5 shrink-0 ${isRunning ? "bg-[#4B7FFF] animate-pulse" : "bg-[#333333]"}`} />
+                              <h3 className="font-semibold text-white text-sm">{ag.role}</h3>
                             </div>
-                            <span className={`text-[9px] font-mono border px-1.5 py-0.5 rounded ${
-                              isRunning
-                                ? "text-yellow-500 border-yellow-500/30 bg-yellow-500/5 animate-pulse"
-                                : "text-[#8B949E] border-[#102142] bg-[#02050c]"
-                            }`}>
-                              {isRunning ? "ACTIVE" : "STANDBY"}
+                            <span className={`text-[10px] font-mono ${isRunning ? "text-[#7BA3FF]" : "text-[#444444]"}`}>
+                              {isRunning ? "ACTIVE" : "IDLE"}
                             </span>
                           </div>
-                          <p className="text-xs text-[#8B949E] mb-4 leading-relaxed">{ag.description}</p>
-                          <div className="p-2.5 rounded-lg bg-[#02050c] border border-[#102142] text-[10px] font-mono">
-                            <span className="text-[#8B949E] block mb-1">LAST ACTION:</span>
-                            <span className="text-white">{ag.lastAction}</span>
+                          <p className="text-xs text-[#555555] mb-5 leading-relaxed">{ag.description}</p>
+                          <div className="border-t border-[#1e1e1e] pt-4 text-xs font-mono text-[#444444]">
+                            {ag.lastAction}
                           </div>
                           {isRunning && (
-                            <div className="w-full bg-[#102142] h-1 rounded-full overflow-hidden mt-3">
-                              <div className="bg-[#58A6FF] h-1 rounded-full animate-pulse" style={{ width: "60%" }} />
+                            <div className="h-px bg-[#1e1e1e] overflow-hidden mt-4">
+                              <div className="h-full bg-[#4B7FFF] animate-pulse" style={{ width: "60%" }} />
                             </div>
                           )}
                         </div>
@@ -2010,49 +1964,46 @@ export default function App() {
 
               {/* DEPLOYMENTS */}
               {currentSection === "deployments" && (
-                <div className="p-6 space-y-6">
+                <div className="px-8 py-10 max-w-4xl mx-auto space-y-8">
                   <div>
-                    <h2 className="text-lg font-bold text-white flex items-center gap-2">
-                      <Globe className="text-[#BC8CFF]" size={18} />
-                      Deployment Ledger
-                    </h2>
-                    <p className="text-xs text-[#8B949E] mt-0.5">Hosting builds, active routes, and production URLs.</p>
+                    <h2 className="text-2xl font-semibold text-white tracking-tight">Deployments</h2>
+                    <p className="text-sm text-[#888888] mt-1">Hosting builds, active routes, and production URLs.</p>
                   </div>
                   {activeProject.deployments.length === 0 ? (
-                    <div className="p-16 text-center border-2 border-dashed border-[#102142] rounded-xl bg-[#050915] flex flex-col items-center gap-3">
-                      <Globe size={36} className="text-[#8B949E] opacity-30" />
-                      <span className="text-white font-bold">No Deployments Found</span>
-                      <span className="text-[#8B949E] text-sm">
-                        Run{" "}
-                        <code className="bg-[#02050c] px-1.5 py-0.5 rounded font-mono text-[#58A6FF]">deploy</code>
-                        {" "}in the terminal to publish.
-                      </span>
+                    <div className="py-24 text-center border border-[#1e1e1e] flex flex-col items-center gap-4">
+                      <Globe size={28} className="text-[#333333]" />
+                      <div>
+                        <p className="text-sm font-medium text-[#eeeeee]">No deployments yet</p>
+                        <p className="text-xs text-[#555555] mt-1">
+                          Run <code className="font-mono text-[#7BA3FF]">deploy</code> in the terminal to publish.
+                        </p>
+                      </div>
                     </div>
                   ) : (
-                    <div className="space-y-3">
+                    <div className="border border-[#1e1e1e] divide-y divide-[#1e1e1e]">
                       {activeProject.deployments.map((dep, i) => (
                         <div
                           key={i}
-                          className="p-4 rounded-xl border border-[#102142] bg-[#050915] flex flex-col md:flex-row justify-between items-start md:items-center gap-4 hover:border-[#8B949E] transition"
+                          className="px-6 py-5 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 hover:bg-[#0f0f0f] transition-colors"
                         >
-                          <div className="space-y-1">
-                            <div className="flex items-center gap-2">
-                              <span className="text-xs bg-[#BC8CFF]/10 text-[#BC8CFF] px-2 py-0.5 rounded font-bold uppercase">{dep.provider}</span>
-                              <span className="text-white font-mono text-sm">{dep.url}</span>
+                          <div className="space-y-1.5">
+                            <div className="flex items-center gap-3">
+                              <span className="text-xs font-mono text-[#555555] uppercase">{dep.provider}</span>
+                              <span className="text-sm font-mono text-[#eeeeee]">{dep.url}</span>
                             </div>
-                            <p className="text-[11px] text-[#8B949E] font-mono">
-                              Branch: <span className="text-[#D29922]">{dep.branch}</span> · Revision: <span className="text-[#58A6FF]">{dep.commitHash}</span>
+                            <p className="text-xs text-[#555555] font-mono">
+                              {dep.branch} · {dep.commitHash}
                             </p>
                           </div>
-                          <div className="flex items-center gap-3 shrink-0">
-                            <span className="text-xs bg-[#3FB950]/15 text-[#3FB950] px-3 py-1 font-bold rounded-full border border-[#3FB950]/30 animate-pulse">LIVE</span>
+                          <div className="flex items-center gap-4 shrink-0">
+                            <span className="text-xs font-mono text-[#4B7FFF]">LIVE</span>
                             <a
                               href={dep.url}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-[#102142] hover:bg-slate-700 p-2 rounded text-white transition flex items-center gap-1 text-[11px]"
+                              className="flex items-center gap-1.5 text-xs text-[#555555] hover:text-[#eeeeee] transition-colors"
                             >
-                              <ExternalLink size={11} /> Visit
+                              <ExternalLink size={12} /> Visit
                             </a>
                           </div>
                         </div>
@@ -2089,14 +2040,14 @@ export default function App() {
               {currentSection === "chat" && (
                 <div className="flex flex-col bg-[#070a0f] min-h-[calc(100vh-88px)]">
                   {/* Chat header */}
-                  <div className="py-3 px-4 border-b border-[#102142] flex items-center justify-between bg-[#0d121c] shrink-0">
+                  <div className="py-3 px-4 border-b border-[#1e1e1e] flex items-center justify-between bg-[#0d121c] shrink-0">
                     <div className="flex items-center gap-2">
                       <MessageSquare className="text-blue-400" size={15} />
                       <span className="text-sm font-semibold text-white">Team Chat</span>
                     </div>
                     <div className="flex items-center gap-2">
                       {activeCollaborators.map((col, i) => (
-                        <span key={i} className="text-[10px] font-mono bg-[#050915] border border-[#102142] px-2 py-0.5 rounded text-[#58A6FF] flex items-center gap-1">
+                        <span key={i} className="text-[10px] font-mono bg-[#0f0f0f] border border-[#1e1e1e] px-2 py-0.5 rounded text-[#7BA3FF] flex items-center gap-1">
                           <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span>
                           {col.name.split(" ")[0]}
                         </span>
@@ -2116,7 +2067,7 @@ export default function App() {
                           <div className={`w-7 h-7 rounded-full flex items-center justify-center font-black uppercase text-[10px] shrink-0 ${
                             isYou
                               ? "bg-[#3FB950]/20 text-[#3FB950] border border-[#3FB950]/35"
-                              : "bg-slate-800 text-[#58A6FF] border border-slate-700"
+                              : "bg-slate-800 text-[#7BA3FF] border border-slate-700"
                           }`}>
                             {msg.sender.substring(0, 2)}
                           </div>
@@ -2124,9 +2075,9 @@ export default function App() {
                             <div className="flex items-center gap-2 flex-wrap">
                               <span className={`font-bold text-[11px] font-mono ${isYou ? "text-[#3FB950]" : "text-zinc-200"}`}>{msg.sender}</span>
                               {msg.role && (
-                                <span className="text-[9px] bg-[#050915] text-[#8B949E] border border-slate-700/50 px-1.5 py-0.5 rounded uppercase font-mono">{msg.role}</span>
+                                <span className="text-[9px] bg-[#0f0f0f] text-[#888888] border border-slate-700/50 px-1.5 py-0.5 rounded uppercase font-mono">{msg.role}</span>
                               )}
-                              <span className="text-[9px] text-[#8B949E]">{msg.timestamp}</span>
+                              <span className="text-[9px] text-[#888888]">{msg.timestamp}</span>
                             </div>
                             <p className="text-[#b1bccc] text-[12px] leading-relaxed">{msg.text}</p>
                           </div>
@@ -2137,7 +2088,7 @@ export default function App() {
                   </div>
 
                   {/* Chat input */}
-                  <div className="p-3 border-t border-[#102142] bg-[#0d121c] shrink-0">
+                  <div className="p-3 border-t border-[#1e1e1e] bg-[#0d121c] shrink-0">
                     <div className="flex gap-2">
                       <input
                         type="text"
@@ -2150,7 +2101,7 @@ export default function App() {
                           }
                         }}
                         placeholder="Type a message... (Enter to send)"
-                        className="bg-[#090d13] border border-[#102142] rounded-lg px-3 py-2 text-[12px] text-white placeholder-gray-500 flex-1 focus:outline-none focus:border-[#58A6FF] font-sans pointer-events-auto"
+                        className="bg-[#090d13] border border-[#1e1e1e] rounded-lg px-3 py-2 text-[12px] text-white placeholder-gray-500 flex-1 focus:outline-none focus:border-[#58A6FF] font-sans pointer-events-auto"
                       />
                       <button
                         type="button"
