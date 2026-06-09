@@ -1649,11 +1649,19 @@ export default function App() {
               </div>
 
               {/* ── Command Input ── */}
-              <div className="shrink-0 border-t border-[#1e1e1e] bg-[#0f0f0f]">
-                <form onSubmit={handleCommandSubmit} className="flex items-stretch">
-                  {/* Prompt symbol */}
+              <div className="shrink-0 border-t border-[#1e1e1e] bg-[#080808] px-4 pt-3 pb-3">
+                {/* Input container — elevated card like ChatGPT/Claude */}
+                <form
+                  onSubmit={handleCommandSubmit}
+                  className={`relative flex items-center bg-[#111111] border transition-colors duration-150 ${
+                    isProcessing
+                      ? "border-[#4B7FFF]/30"
+                      : "border-[#222222] focus-within:border-[#333333]"
+                  }`}
+                >
+                  {/* Prompt prefix */}
                   <div
-                    className={`shrink-0 flex items-center px-5 font-mono font-semibold select-none transition-colors ${
+                    className={`shrink-0 pl-4 pr-2 font-mono font-semibold select-none transition-all duration-200 ${
                       isProcessing ? "text-[#4B7FFF] animate-pulse" : "text-[#4B7FFF]"
                     }`}
                     style={{ fontSize: 13 }}
@@ -1661,19 +1669,19 @@ export default function App() {
                     {isProcessing ? "⟳" : "~$"}
                   </div>
 
-                  {/* Input */}
+                  {/* Text input */}
                   <input
                     type="text"
                     value={commandText}
                     onChange={(e) => setCommandText(e.target.value)}
                     disabled={isProcessing}
-                    placeholder={isProcessing ? "Agent executing…" : "Command or natural language prompt…"}
-                    className="bg-transparent border-none outline-none flex-1 font-mono text-[13px] text-[#eeeeee] placeholder-[#2a2a2a] focus:ring-0 select-text min-w-0 py-3.5"
+                    placeholder={isProcessing ? "Agent running…" : "Ask anything or run a command…"}
+                    className="flex-1 bg-transparent border-none outline-none font-mono text-[13px] text-[#eeeeee] placeholder-[#333333] focus:ring-0 select-text min-w-0 py-3.5 pr-2"
                     style={{ fontFeatureSettings: '"kern" 0, "liga" 1', letterSpacing: "0.005em" }}
                     autoFocus
                   />
 
-                  {/* Think toggle */}
+                  {/* Think toggle — small icon pill */}
                   <button
                     type="button"
                     onClick={() => {
@@ -1681,43 +1689,47 @@ export default function App() {
                       if (!thinkingMode) setDetailedReasoningText("Thinking Mode activated. Agent stacks will decompose requirements in detail.");
                       else setDetailedReasoningText("");
                     }}
-                    className={`shrink-0 flex items-center gap-1.5 px-4 border-l border-[#1e1e1e] font-mono transition-colors cursor-pointer pointer-events-auto ${
-                      thinkingMode ? "text-[#7BA3FF] bg-[#4B7FFF]/8" : "text-[#444444] hover:text-[#888888]"
+                    className={`shrink-0 flex items-center gap-1 mr-2 px-2.5 py-1 font-mono text-[10px] transition-all duration-150 cursor-pointer rounded-full ${
+                      thinkingMode
+                        ? "bg-[#4B7FFF]/15 text-[#7BA3FF] border border-[#4B7FFF]/30"
+                        : "text-[#444444] hover:text-[#666666] border border-transparent hover:border-[#222222]"
                     }`}
-                    style={{ fontSize: 11 }}
+                    title="Toggle thinking mode"
                   >
-                    <Cpu size={11} />
-                    <span className="hidden sm:inline">{thinkingMode ? "THINK·ON" : "THINK"}</span>
+                    <Cpu size={10} />
+                    <span className="hidden sm:inline">{thinkingMode ? "Think" : "Think"}</span>
                   </button>
 
-                  {/* Run */}
+                  {/* Send button — circular, ChatGPT/Claude style */}
                   <button
                     type="submit"
                     disabled={isProcessing}
-                    className={`shrink-0 flex items-center gap-2 px-5 font-medium border-l border-[#1e1e1e] transition-colors cursor-pointer pointer-events-auto disabled:opacity-40 disabled:cursor-not-allowed ${
-                      isProcessing ? "text-[#4B7FFF]" : "bg-[#4B7FFF] hover:bg-[#5C8FFF] active:bg-[#3A6FEF] text-white"
+                    className={`shrink-0 mr-2 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-150 cursor-pointer pointer-events-auto ${
+                      isProcessing
+                        ? "bg-[#4B7FFF]/20 text-[#4B7FFF] cursor-not-allowed"
+                        : commandText.trim().length > 0
+                          ? "bg-white hover:bg-[#e8e8e8] active:scale-95 active:bg-[#d0d0d0] text-[#080808] shadow-sm"
+                          : "bg-[#1e1e1e] text-[#444444] cursor-not-allowed"
                     }`}
-                    style={{ fontSize: 13 }}
+                    title="Send (Enter)"
                   >
                     {isProcessing ? (
-                      <>
-                        <span className="w-1.5 h-1.5 bg-[#7BA3FF] animate-bounce [animation-delay:-0.15s]" />
-                        <span className="hidden sm:inline font-mono text-[11px]">running</span>
-                      </>
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="animate-spin">
+                        <circle cx="7" cy="7" r="5.5" stroke="currentColor" strokeWidth="1.5" strokeDasharray="22" strokeDashoffset="8" strokeLinecap="round" />
+                      </svg>
                     ) : (
-                      <>
-                        <Send size={12} strokeWidth={2.5} />
-                        <span>Run</span>
-                      </>
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M7 11V3M3.5 6.5L7 3L10.5 6.5" stroke="currentColor" strokeWidth="1.8" />
+                      </svg>
                     )}
                   </button>
                 </form>
 
-                {/* Hint row */}
-                <div className="flex items-center gap-3 px-5 pb-2 pt-0.5">
-                  <span className="text-[10px] font-mono text-[#222222]">Enter ↵ · ESC clear</span>
-                  {commandText.length > 0 && (
-                    <span className="text-[10px] font-mono text-[#4B7FFF]/40 tabular-nums">{commandText.length}</span>
+                {/* Bottom hint row */}
+                <div className="flex items-center justify-between mt-1.5 px-1">
+                  <span className="text-[10px] font-mono text-[#222222]">Enter ↵ to send · ESC to clear</span>
+                  {commandText.length > 0 && !isProcessing && (
+                    <span className="text-[10px] font-mono text-[#333333] tabular-nums">{commandText.length} chars</span>
                   )}
                 </div>
               </div>
