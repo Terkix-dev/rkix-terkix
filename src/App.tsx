@@ -48,6 +48,7 @@ import {
   Package
 } from "lucide-react";
 import { Project, WorkspaceFile, Agent, TerminalLine, Deployment, GitCommit } from "./types";
+import { Analytics } from "@vercel/analytics/react";
 import { readJsonStorage, readNumberStorage, readStringStorage, writeStorage } from "./utils/storage";
 import { PRESET_PROJECTS } from "./data/presets";
 import DashboardOverview from "./components/DashboardOverview";
@@ -385,7 +386,7 @@ export default function App() {
     // Simulate multi-user collaborator reactions based on user text keywords
     setTimeout(() => {
       let replyText = "Đã rõ! Tôi nghĩ cấu trúc này khá phù hợp. Hãy kiểm tra biên dịch và chạy thử nhé.";
-      let responder = activeCollaborators[Math.floor(Math.random() * activeCollaborators.length)] || { name: "Nguyên Văn Hùng", role: "Lead Architect" };
+      let responder = activeCollaborators[Math.floor(Math.random() * activeCollaborators.length)] || { name: "Nguy��n Văn Hùng", role: "Lead Architect" };
 
       if (textClean.toLowerCase().includes("css") || textClean.toLowerCase().includes("style") || textClean.toLowerCase().includes("màu") || textClean.toLowerCase().includes("giao diện")) {
         responder = activeCollaborators.find(c => c.role?.includes("Designer") || c.role?.includes("Artisan") || c.name.includes("Mai")) || { name: "Trần Thị Mai", role: "Designer Agent" };
@@ -2162,6 +2163,7 @@ export default function App() {
 
         </main>
       </div>
+      <Analytics />
     </div>
   );
 }
